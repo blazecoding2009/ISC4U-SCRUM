@@ -17,14 +17,14 @@ public class Arms {
   
         int yCoord[] = {6, 63, 129, 153, 144, 129, 122, 135, 120, 70, 16}; 
 
-        for (int a : xCoord) {
-            a = a + x;
+        for (int i = 0; i < xCoord.length; i++) {
+            xCoord[i] = xCoord[i] + x; 
         }
 
-        for (int b : yCoord) {
-            b = b + y;
+        for (int i = 0; i < yCoord.length; i++) {
+            yCoord[i] = yCoord[i] + y; 
         }
-  
+        
         int numberofpoints = 11; 
   
         g.setColor(Color.gray); 
