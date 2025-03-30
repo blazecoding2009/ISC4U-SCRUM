@@ -1,4 +1,4 @@
-package src.packageScrum;
+package packageScrum;
 
 public class LoranceWork {
 
