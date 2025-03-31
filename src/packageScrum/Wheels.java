@@ -4,6 +4,18 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Wheels {
+	
+	public Wheels() {
+		
+	}
+	
+	/**
+	 * This method draws the wheels of the robot
+	 * @param x x coordinate of the wheel
+	 * @param y y coordinate of the wheel
+	 * @param size size of the wheel
+	 * @param g graphics object to draw the wheel
+	 */
     public void drawWheel(int x, int y, int size, Graphics g) {
     	g.setColor(new Color(80, 80, 80)); // grey
         g.fillOval(x, y, size, size);

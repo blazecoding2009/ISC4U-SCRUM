@@ -19,6 +19,10 @@ public class Main extends Canvas {
     public void paint(Graphics g) {
         Arms armOne = new Arms();
         Wheels wheel = new Wheels();
+        Body body = new Body(200, 225, 200, g);
+        
+        body.addBody();
+        
         armOne.addArm(200, 218, g);
         armOne.addArm(350, 218, g);
         armOne.addArm(500, 218, g);
