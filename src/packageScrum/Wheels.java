@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Wheels {
-    public void wheel(int x, int y, int size, Graphics g) {
+    public void drawWheel(int x, int y, int size, Graphics g) {
     	g.setColor(new Color(80, 80, 80)); // grey
         g.fillOval(x, y, size, size);
         
@@ -23,6 +23,15 @@ public class Wheels {
         g.setColor(new Color(120, 120, 120)); // lighter metal
         int hubSize = size / 3;
         g.fillOval(cx - hubSize / 2, cy - hubSize / 2, hubSize, hubSize);
+        
+        // wheel spokes
+        g.setColor(new Color(150, 150, 150));
+        for (int i = 0; i < 6; i++) {
+            double angle = Math.toRadians(i * 60); // 6 spokes
+            int ex = (int) (cx + Math.cos(angle) * radius * 0.6);
+            int ey = (int) (cy + Math.sin(angle) * radius * 0.6);
+            g.drawLine(cx, cy, ex, ey);
+        }
 
     }
 }
