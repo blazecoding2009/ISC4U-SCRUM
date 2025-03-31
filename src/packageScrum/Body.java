@@ -4,7 +4,6 @@ import java.awt.*;
 
 
 public class Body {
-		
 		private int x, y, size;
 		private Graphics g;
 	

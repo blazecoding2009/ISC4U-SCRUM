@@ -5,21 +5,22 @@ import javax.swing.JFrame;
 
 
 public class Main extends Canvas {
-
     public static void main(String[] args) {
-    JFrame frame = new JFrame("Mars Rover");
-    Canvas canvas = new Main();
-    canvas.setSize(1000, 800);
-    frame.add(canvas);
-    frame.pack();
-    frame.setVisible(true);
-
+	    JFrame frame = new JFrame("Mars Rover");
+	    Canvas canvas = new Main();
+	    canvas.setSize(1000, 800);
+	    frame.add(canvas);
+	    frame.pack();
+	    frame.setVisible(true);
     }
 
     public void paint(Graphics g) {
         Arms armOne = new Arms();
         Wheels wheel = new Wheels();
         Body body = new Body(200, 225, 200, g);
+        Background background = new Background();
+        
+        background.drawMarsBackground(g, 1000, 800);
         
         body.addBody();
         
@@ -31,6 +32,4 @@ public class Main extends Canvas {
         wheel.drawWheel(350, 400, 100, g);
         wheel.drawWheel(500, 400, 100, g);
     }
-    
-}   
-        
+}

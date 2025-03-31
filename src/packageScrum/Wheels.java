@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Wheels {
-    
     public Wheels() {
     }
 
@@ -20,15 +19,15 @@ public class Wheels {
         int cy = y + size / 2;
         int radius = size / 2;
 
-        //  wheel body
+        // wheel body
         g.setColor(new Color(80, 80, 80));
         g.fillOval(x, y, size, size);
 
-        //  rim 
+        // rim 
         g.setColor(new Color(50, 50, 50));
         g.drawOval(x, y, size, size);
 
-        // First ring of treads
+        // first ring of treads
         g.setColor(new Color(60, 60, 60));
         for (int i = 0; i < 12; i++) {
             double angle = Math.toRadians(i * 30);
@@ -37,7 +36,7 @@ public class Wheels {
             g.fillRect(tx - 2, ty - 2, 4, 4);
         }
 
-        // Second ring of treads
+        // second ring of treads
         for (int i = 0; i < 12; i++) {
             double angle = Math.toRadians(i * 30 + 15); // offset from first ring
             int tx = (int) (cx + Math.cos(angle) * radius * 0.65);
@@ -45,12 +44,12 @@ public class Wheels {
             g.fillRect(tx - 1, ty - 1, 3, 3);
         }
 
-        // Center hub
+        // center hub
         int hubSize = size / 3;
         g.setColor(new Color(120, 120, 120));
         g.fillOval(cx - hubSize / 2, cy - hubSize / 2, hubSize, hubSize);
 
-        // Hub bolts
+        // hub bolts
         g.setColor(new Color(90, 90, 90));
         for (int i = 0; i < 6; i++) {
             double angle = Math.toRadians(i * 60);
@@ -59,7 +58,7 @@ public class Wheels {
             g.fillOval(bx - 2, by - 2, 4, 4);
         }
 
-        // Wheel spokes
+        // wheel spokes
         g.setColor(new Color(150, 150, 150));
         for (int i = 0; i < 6; i++) {
             double angle = Math.toRadians(i * 60);
