@@ -2,13 +2,24 @@ package packageScrum;
 
 import java.awt.Color;
 import java.awt.Graphics;
-
+/**
+ * This class draws the arms of the robot
+ * @author Darren Su
+ * @version March 30th 2025
+ */
 public class Arms {
 
     public void Arms(){
         
     }
-
+    /**
+     * This method draws the arms of the robot
+     * pre: x and y are the coordinates of the robot
+     * post: the arms of the robot are drawn
+     * @param x x coordiate of the arm
+     * @param y y coordiate of the arm
+     * @param g graphics object to draw the arm
+     */
     public void addArm(int x, int y, Graphics g){
 
         g.setColor(new Color(128, 128, 128)); 
@@ -28,7 +39,11 @@ public class Arms {
         int numberofpoints = 11; 
   
         g.setColor(Color.gray); 
+
         g.drawPolygon(xCoord, yCoord, numberofpoints); 
+
+        g.setColor(Color.gray); 
+        g.fillPolygon(xCoord, yCoord, numberofpoints);
     }
     
 }
