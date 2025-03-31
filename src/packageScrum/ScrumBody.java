@@ -19,6 +19,6 @@ public class ScrumBody {
     		g.setColor(new Color(80, 80, 80));
     		g.fillRect(x, y, size*2, size);
     		g.setColor(new Color(60,60,60));
-    		g.fillRect(x+50,y+50, (size*2)/3, size/2);
+    		g.fillRect(x+50,y+50, (size/2)*3, size/2);
     	}
 }
